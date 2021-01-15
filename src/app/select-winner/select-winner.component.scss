@@ -1,3 +1,4 @@
+@import "./../../assets/scss/variables.scss";
 .file-group {
   margin-top: 2rem;
   .btn {
@@ -18,4 +19,54 @@ audio {
   width: 100%;
   display: block;
   margin-top: 1rem;
+}
+.user-audio-list {
+  list-style: none;
+  .card {
+    transition: $transition;
+    .card-info {
+      position: relative;
+      padding-right: 2rem;
+    }
+    .radio-box {
+      position: absolute;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 0.4rem;
+      border: 2px solid $blue;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    p {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    &.selected {
+      background: $blue;
+      color: #ffffff;
+      box-shadow: 0 10px 0.875rem -8px rgb(40 51 76 / 0.6);
+      .radio-box {
+        position: absolute;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 0.4rem;
+        border: 2px solid #fff;
+        background: $blue;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:before {
+          content: "\2713";
+        }
+      }
+    }
+    &.pending {
+      background: lighten($red, $amount: 15);
+      color: #ffffff;
+    }
+  }
 }
