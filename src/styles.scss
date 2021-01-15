@@ -1,0 +1,140 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./assets/scss/variables.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+#root,
+body,
+html {
+  height: 100%;
+}
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  background: #f7f7fc;
+  color: #495057;
+}
+.wrapper {
+  padding: 0 1.5rem;
+  @media (min-width: 45em) {
+    width: 45em;
+    margin: 0 auto;
+  }
+}
+.card {
+  background: #ffffff;
+  padding: 1rem 1rem 1.2rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.875rem 0 rgba(33, 37, 41, 0.05);
+  margin-bottom: 1.5rem;
+  h4.card-title {
+    font-size: 1.5rem;
+    line-height: 1.25;
+    margin-bottom: 1rem;
+  }
+  .card-para {
+    background: #f7f7fc;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.form-group {
+  margin-bottom: 0.8rem;
+  label {
+    display: inline-block;
+    font-weight: 400;
+    transform: translateY(10px);
+    color: #868686;
+  }
+  .form-control {
+    width: 100%;
+    min-height: 3rem;
+    border-radius: 0;
+    border: 0;
+    border-bottom: 2px solid $blue;
+    outline: 0;
+    padding: 0;
+    font-family: inherit;
+    color: $blue;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: $blue;
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
+}
+.btn {
+  border-radius: 1.5rem;
+  background: $blue;
+  border: 1px solid $blue;
+  color: #ffffff;
+  min-height: 3rem;
+  padding: 0 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-shadow: 0 6px 6px -3px lighten($blue, $amount: 20);
+  &.full {
+    width: 100%;
+  }
+}
+.close-card {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: $red;
+  color: #fff;
+  padding: 0.1rem 0.5rem;
+  text-align: center;
+  font-size: 0.7rem;
+  border-radius: 0.2rem;
+  transform: translateY(0.4rem);
+}
+.page {
+  .app-header {
+    background: $blue;
+    border-radius: 0 0 1rem 1rem;
+    padding: 2rem 0 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    .wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    h4 {
+      color: #fff;
+      font-size: 2rem;
+    }
+    .logout-btn {
+      width: 2rem;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .app-body {
+    transform: translateY(-2rem);
+  }
+}
+.owl-theme .owl-nav {
+  display: flex;
+  justify-content: flex-end;
+}

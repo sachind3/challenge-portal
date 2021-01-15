@@ -1,0 +1,42 @@
+<div class="page">
+  <div class="app-header">
+    <div class="wrapper">
+      <h4>Challenge Title</h4>
+      <a href="./" class="logout-btn"
+        ><img src="./../../assets/logout.svg" alt=""
+      /></a>
+    </div>
+  </div>
+  <div class="app-body">
+    <div class="wrapper">
+      <div class="card">
+        <owl-carousel-o [options]="customOptions">
+          <ng-template carouselSlide
+            ><img src="./../../assets/slide-1.png" alt=""
+          /></ng-template>
+          <ng-template carouselSlide
+            ><img src="./../../assets/slide-1.png" alt=""
+          /></ng-template>
+          <ng-template carouselSlide
+            ><img src="./../../assets/slide-1.png" alt=""
+          /></ng-template>
+        </owl-carousel-o>
+        <div class="file-group">
+          <label for="selectAudio" class="btn">
+            <input type="file" accept="audio/*" id="selectAudio" />
+            Browse Audio file
+          </label>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Audio Preview</h3>
+        <audio controls>
+          <source src="./../../assets/horse.ogv" type="audio/ogg" />
+          <source src="./../../assets/horse.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <button type="button" class="btn full">Submit</button>
+    </div>
+  </div>
+</div>

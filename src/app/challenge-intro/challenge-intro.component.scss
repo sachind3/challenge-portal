@@ -1,0 +1,12 @@
+ol {
+  padding-left: 1rem;
+  li {
+    margin-bottom: 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.btn {
+  margin-top: 1.5rem;
+}
